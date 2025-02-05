@@ -1,0 +1,83 @@
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "a1635532-f168-4369-920b-8c9b396dfd94",
+        apiHost: "http://localhost:3000",
+        chatflowConfig: {
+            // topK: 2
+        },
+        theme: {
+            button: {
+                color:"white",
+                backgroundColor: '#262637',
+                right: 30,  
+                bottom: 30,
+                size: 48, // small | medium | large | number
+                dragAndDrop: true,
+                iconColor: "white",
+                customIconSrc: 'https://raw.githubusercontent.com/KinkLerr/Chatbot-Tugas-Akhir/refs/heads/main/custom%20chatbot/logo-putih6.svg',
+                autoWindowOpen: {
+                    autoOpen: true, //parameter to control automatic window opening
+                    openDelay: 2, // Optional parameter for delay time in seconds
+                    autoOpenOnMobile: false, //parameter to control automatic window opening in mobile
+                    },
+            },
+            tooltip: {
+                showTooltip: true,
+                tooltipMessage: 'Tanya Disini👋',
+                tooltipBackgroundColor: "linear-gradient(45deg, #21BCC6, #8A3DFF)",
+                tooltipTextColor: 'white',
+                tooltipFontSize: 16,
+            },
+            chatWindow: {
+                showTitle: true,
+                title: 'Infinite Learning',
+                titleAvatarSrc: 'https://raw.githubusercontent.com/KinkLerr/Chatbot-Tugas-Akhir/refs/heads/main/custom%20chatbot/logo-hitam.svg',
+                showAgentMessages: true,
+                welcomeMessage: 'Halo Inners👋, Apa yang ingin kamu tanyakan?',
+                errorMessage: 'Tunggu Sebentar yaa..',
+                backgroundColor: "#ffffff",
+                backgroundImage: 'enter image path or link', // If set, this will overlap the background color of the chat window.
+                height: 700,
+                width: 400,
+                fontSize: 13,
+                //starterPrompts: ['What is a bot?', 'Who are you?'], // It overrides the starter prompts set by the chat flow passed
+                starterPromptFontSize: 15,
+                clearChatOnReload: false, // If set to true, the chat will be cleared when the page reloads.
+                botMessage: {
+                    backgroundColor: "#f7f8ff",
+                    textColor: "#303235",
+                    showAvatar: true,
+                    avatarSrc: "https://raw.githubusercontent.com/KinkLerr/Chatbot-Tugas-Akhir/refs/heads/main/custom%20chatbot/icon-mentor.svg",
+                },
+                userMessage: {
+                    backgroundColor: "#262637",
+                    textColor: "#ffffff",
+                    showAvatar: true,
+                    avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                },
+                textInput: {
+                    placeholder: 'Berikan saya pertanyaan',
+                    backgroundColor: '#ffffff',
+                    textColor: '#303235',
+                    sendButtonColor: '#262637',
+                    maxChars: 75,
+                    maxCharsWarningMessage: 'Anda melampaui batas karakter. Harap masukkan kurang dari 50 karakter.',
+                    autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
+                    sendMessageSound: true,
+                    // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
+                    receiveMessageSound: true,
+                    // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true. 
+                },
+                feedback: {
+                    color: '#303235',
+                },
+                footer: {
+                    textColor: '#303235',
+                    text: '@',
+                    company: 'Infinite Learning',
+                }
+            }
+        }
+    })
+</script>
